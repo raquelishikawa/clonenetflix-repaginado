@@ -1,0 +1,125 @@
+* {
+    margin: 0; /* margem */
+    padding: 0; /* distância do conteúdo de um elemento e suas bordas */
+    box-sizing: border-box; /* o limite é a borda da caixa */
+}
+
+:root {
+    --vermelho: #F2D152;
+    --preta: #000000;
+    
+}
+/* root = raíz do documento para utilização de variáveis dentro do CSS3 */
+/* boa prática: apresentar na raíz as cores e fontes que serão repetidas no desenvolvimento do site */
+
+/* Elementos Base */
+body {
+    background: var(--preta);
+    font-family: "Arial", Times, serif;
+    color: #ffffff;
+}
+
+header .container {
+    display: flex; /* flex-box = uma forma de alinhar os elementos em tela */
+    flex-direction: row; /* toda vez que colocamos um display-flex, ele automaticamente deixa tudo alinhado */
+    align-items: center; /* para centralizar os elementos */
+    justify-content: space-between;
+    /* para justificar os elementos e separar os elementos do conteiner da nav */
+    /* space-between = distância entre os elementos */
+}
+
+header .logo {
+    color: var(--vermelho);
+    font-family: "Helvetica", Arial, Helvetica, sans-serif;
+    font-size: 40px;
+
+}
+
+header nav a {
+    text-decoration: none;
+    color: #AAAAAA;
+    margin-right: 10px;
+}
+
+header nav a:hover {
+    color: #ffffff;
+}
+
+/* Imagem Principal */
+.imagem-principal {
+    font-size: 16px;
+    background: linear-gradient(rgba(255, 255, 255, 0.5),rgba(0, 0, 0, .50)100%), url('../img/capa.png');
+    height: 600px;
+    background-size: cover;
+    display: flex; /* linha */
+    flex-direction: column; /* para dar a direção em formato de coluna */
+    justify-content: center; /* para centralizar os elementos */
+    align-items: flex-start; /* para começar sempre da esquerda para a direita */
+}
+
+.imagem-principal .descricao {
+    margin-top: 10px;
+    margin-bottom: 40px;
+}
+
+.titulo {
+    margin-top: 15%; /* utilizamos porcentual para facilitar na construção mobile */
+    font-size: 40px;
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+/* Os botões já possuem um formato definido */
+/* Utilizamos os ícones da font awesome para os botões */
+
+.botao {
+    background-color: #FCBCBC;
+    border: none;
+    color: white;
+    padding: 15px 30px; /* 1º valor: em cima e embaixo | 2º valor: para direita e esquerda */
+    margin-right: 15px;
+    font-size: 12px;
+    cursor: pointer; /* para que todos saibam que é um local clicável */
+    transition: .5s ease all;
+}
+
+.botao:hover {
+    background-color: white;
+    color: black;
+
+}
+
+.botao i {
+    margin-right: 8px;
+}
+
+/* Parte 6: Container | WRAPPER = Envelopar | Uma forma de transformar o container inteiro (todos os elementos) */
+
+.container {
+    margin-left: 20px;
+}
+
+.imagem-principal .container {
+    width: 70%;
+}
+
+/* Usamos o plugin jquery como ferramenta / extensão para aprender a como utilizar */
+/* https://owlcarousel2.github.io/OwlCarousel2/ */
+
+.box-filme {
+    height: 100%;
+    width: 100%;
+    display: block;
+
+} 
+
+.carrosel-filmes {
+    margin-top: 5px;
+}
+
+
+
+
+
+
+
+
